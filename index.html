@@ -29,7 +29,7 @@
             var marray=[]
             while(m!=0){
                 marray.push(m%obj.n)
-                m/=obj.n
+                m=Math.floor(m/obj.n)
             }
             for(var i=0;i<marray.length;i++) alert(i+'\n'+marray[i]);
         });

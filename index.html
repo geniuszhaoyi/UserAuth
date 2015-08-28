@@ -19,7 +19,18 @@
             $("#nologin").show();
         });
         $("#submit").click(function(){
-            
+            var m=0;
+            mstr='Hello world'
+            for(var i=0;i<mstr.length;i++){
+                m+=mstr.charCodeAt(i);
+                m*=128;
+            }
+            marray=array()
+            while(m!=0){
+                marray[]=m%n
+                m/=obj.n
+            }
+            for(var i=0;i<marray.length;i++) alert(i+'\n'+marray[i]);
         });
     });
 </script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+    <!--
+    .stylewhite {color: white}
+    -->
+</style>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="javascript/util.jsp"></script>
+<script>
+    var obj;
+    $(document).ready(function(){
+        $("#nologin").hide()
+        $("#login").hide()
+        $.get("getRSApubkey.php",function(data,status){
+            obj = jQuery.parseJSON(data);
+            
+            $("#nologin").show();
+        });
+        $("#submit").click(function(){
+            
+        });
+    });
+</script>
+</head>
+
+<body>
+<h2>登陆</h2>
+
+<div id='notlogin'>
+Username: <input type="text" id="user">
+Password: <input type="password" id="pswd">
+<input type="submit" id="submit">
+</div>
+<div id='login'>login</div>
+
+</body>
+</html>
